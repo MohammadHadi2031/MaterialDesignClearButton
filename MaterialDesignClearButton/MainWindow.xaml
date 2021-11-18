@@ -1,0 +1,33 @@
+﻿<Window x:Class="MaterialDesignClearButton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaterialDesignClearButton"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Style="{StaticResource MaterialDesignWindow}"
+        Title="MainWindow" Height="150" Width="450">
+    <StackPanel>
+        <DatePicker x:Name="datePicker"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    Width="200"
+                    Margin="5"/>
+        
+        <StackPanel Orientation="Horizontal"
+                    Margin="5">
+            <TextBlock Text="Selected Date:"
+                       Margin="10, 0, 0, 0"
+                       VerticalAlignment="Center" />
+            
+            <TextBlock x:Name="selectedDateTextBlock"
+                       Margin="10, 0, 0, 0"
+                       VerticalAlignment="Center"/>
+            
+            <Button Content="Update"
+                    Margin="10, 0, 0, 0"
+                    x:Name="UpdateSelectedDateButton"
+                    Click="UpdateSelectedDateButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
